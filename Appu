@@ -1,0 +1,40 @@
+hi i am deepak
+
+        try_again()
+    elif user_choice == "3":
+        print ("You Win! The computer chose Paper, while you picked Scissors.")
+        user_score += 1                    
+        try_again()
+    else:
+        print ("ERROR: Invalid entry, please re-enter your choice. ")
+        computer_paper()
+
+def computer_scissors():
+    user_choice = input("1 for Rock, 2 for Paper, 3 for Scissors: ")
+    if user_choice == "1":
+        print ("You Win! You chose rock, while the computer picked Scissors.")
+        user_score += 1  
+        try_again()                  
+    elif user_choice == "2":
+        print ("You Lose! The computer chose Scissors, while you picked Paper.")
+        computer_score += 1                    
+        try_again()
+    elif user_choice == "3":
+        print ("Draw! You both picked Scissors.")
+        tied += 1            
+        try_again()
+    else:
+        print ("ERROR: Invalid entry, please re-enter your choice. ")
+        computer_scissors()
+
+def try_again():
+    choice = input("Play again? Yes or no. ")
+    if choice == "y" or choice == "Y" or choice == "yes" or choice == "Yes":
+        main()
+    elif choice == "n" or choice == "N" or choice == "no" or choice == "No":
+        print ("Thanks for playing. ") 
+    else:
+        print ("Try again")
+        try_again()
+
+main()
