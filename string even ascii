@@ -1,0 +1,20 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    String str=sc.next();
+    for (char c : str.toCharArray()) {
+        int a=(int)c;
+        int b=c;
+        if(a%2==0){
+            System.out.println("even ascii values");
+            
+            System.out.println(c+"="+a);
+        }else{
+            System.out.println("odd ascii");
+            System.out.println(c+"="+a);
+        }
+    }
+  }
+}
+   
